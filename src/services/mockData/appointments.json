@@ -1,0 +1,62 @@
+[
+  {
+    "Id": 1,
+    "patientId": 1,
+    "doctorId": 2,
+    "patientName": "Sarah Johnson",
+    "doctorName": "Dr. Michael Chen",
+    "date": "2024-12-20",
+    "timeSlot": "9:00 AM",
+    "service": "General Consultation",
+    "status": "upcoming",
+    "notes": ""
+  },
+  {
+    "Id": 2,
+    "patientId": 3,
+    "doctorId": 2,
+    "patientName": "John Doe",
+    "doctorName": "Dr. Michael Chen",
+    "date": "2024-12-20",
+    "timeSlot": "10:00 AM",
+    "service": "Follow-up",
+    "status": "upcoming",
+    "notes": ""
+  },
+  {
+    "Id": 3,
+    "patientId": 1,
+    "doctorId": 4,
+    "patientName": "Sarah Johnson",
+    "doctorName": "Dr. Emily Wilson",
+    "date": "2024-12-18",
+    "timeSlot": "2:00 PM",
+    "service": "Specialist Consultation",
+    "status": "completed",
+    "notes": "Patient reported improvement in symptoms. Continue current medication."
+  },
+  {
+    "Id": 4,
+    "patientId": 5,
+    "doctorId": 2,
+    "patientName": "Mary Smith",
+    "doctorName": "Dr. Michael Chen",
+    "date": "2024-12-21",
+    "timeSlot": "11:30 AM",
+    "service": "Health Checkup",
+    "status": "upcoming",
+    "notes": ""
+  },
+  {
+    "Id": 5,
+    "patientId": 3,
+    "doctorId": 4,
+    "patientName": "John Doe",
+    "doctorName": "Dr. Emily Wilson",
+    "date": "2024-12-15",
+    "timeSlot": "3:30 PM",
+    "service": "General Consultation",
+    "status": "completed",
+    "notes": "Regular checkup completed. All vitals normal."
+  }
+]

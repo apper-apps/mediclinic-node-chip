@@ -1,0 +1,38 @@
+[
+  {
+    "Id": 1,
+    "patientId": 1,
+    "appointmentId": 3,
+    "fileName": "Blood_Test_Results_Dec2024.pdf",
+    "fileUrl": "/mock-files/blood-test-sarah.pdf",
+    "uploadDate": "2024-12-18T15:30:00Z",
+    "fileType": "pdf"
+  },
+  {
+    "Id": 2,
+    "patientId": 1,
+    "appointmentId": 3,
+    "fileName": "X-Ray_Chest_December.jpg",
+    "fileUrl": "/mock-files/xray-chest-sarah.jpg",
+    "uploadDate": "2024-12-18T16:00:00Z",
+    "fileType": "image"
+  },
+  {
+    "Id": 3,
+    "patientId": 3,
+    "appointmentId": 5,
+    "fileName": "Lab_Report_Comprehensive.pdf",
+    "fileUrl": "/mock-files/lab-report-john.pdf",
+    "uploadDate": "2024-12-15T14:20:00Z",
+    "fileType": "pdf"
+  },
+  {
+    "Id": 4,
+    "patientId": 5,
+    "appointmentId": null,
+    "fileName": "Previous_Medical_History.pdf",
+    "fileUrl": "/mock-files/medical-history-mary.pdf",
+    "uploadDate": "2024-12-10T09:45:00Z",
+    "fileType": "pdf"
+  }
+]
