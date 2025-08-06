@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import Layout from "@/components/organisms/Layout";
 import LoginPage from "@/components/pages/LoginPage";
+import GuestLoginPage from "@/components/pages/GuestLoginPage";
 import PatientHomePage from "@/components/pages/PatientHomePage";
 import BookAppointmentPage from "@/components/pages/BookAppointmentPage";
 import ReportsPage from "@/components/pages/ReportsPage";
@@ -14,7 +15,8 @@ function App() {
     <BrowserRouter>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
         <Routes>
-          <Route path="/login" element={<LoginPage />} />
+<Route path="/login" element={<LoginPage />} />
+          <Route path="/guest-login" element={<GuestLoginPage />} />
           <Route path="/" element={<Layout />}>
             <Route index element={<Navigate to="/home" replace />} />
             <Route path="home" element={<PatientHomePage />} />

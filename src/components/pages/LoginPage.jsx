@@ -99,7 +99,7 @@ const LoginPage = () => {
     }
   };
 
-  const fillDemoCredentials = (role) => {
+const fillDemoCredentials = (role) => {
     if (role === "patient") {
       setFormData({
         email: "patient@demo.com",
@@ -119,6 +119,9 @@ const LoginPage = () => {
     setIsLogin(true);
   };
 
+  const handleGuestLogin = () => {
+    navigate("/guest-login");
+  };
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
       <div className="w-full max-w-md">
@@ -262,7 +265,7 @@ const LoginPage = () => {
               placeholder="Enter your password"
             />
 
-            <Button
+<Button
               type="submit"
               variant="primary"
               size="lg"
@@ -280,6 +283,17 @@ const LoginPage = () => {
                   {isLogin ? "Sign In" : "Create Account"}
                 </>
               )}
+            </Button>
+
+            <Button
+              type="button"
+              variant="outline"
+              size="lg"
+              onClick={handleGuestLogin}
+              className="w-full mt-4 border-primary-200 text-primary-600 hover:bg-primary-50"
+            >
+              <ApperIcon name="UserX" className="w-4 h-4 mr-2" />
+              Continue as Guest
             </Button>
           </form>
         </div>
