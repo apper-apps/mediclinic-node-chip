@@ -13,10 +13,9 @@ import appointmentService from "@/services/api/appointmentService";
 const PatientHomePage = () => {
   const navigate = useNavigate();
   const [appointments, setAppointments] = useState([]);
-  const [loading, setLoading] = useState(true);
+const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const currentUser = userService.getCurrentUser();
-
+  const [currentUser] = useState(() => userService.getCurrentUser());
   const loadAppointments = async () => {
     if (!currentUser) return;
     
@@ -31,13 +30,15 @@ const PatientHomePage = () => {
     } finally {
       setLoading(false);
     }
-  };
+};
 
   useEffect(() => {
-    loadAppointments();
-  }, [currentUser]);
+    if (currentUser) {
+      loadAppointments();
+    }
+  }, []);
 
-  const upcomingAppointments = appointments.filter(apt => 
+  const upcomingAppointments = appointments.filter(apt =>
     apt.status === "upcoming" && isAfter(parseISO(apt.date), new Date())
   );
 
@@ -57,12 +58,12 @@ const PatientHomePage = () => {
     <div className="space-y-6 animate-fade-in">
       {/* Welcome Header */}
       <div className="bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-6 text-white">
-        <div className="flex items-center justify-between">
+<div className="flex items-center justify-between">
           <div>
-            <h1 className="text-2xl font-bold mb-2">
+            <h1 className="text-2xl font-bold mb-2 whitespace-nowrap">
               Welcome back, {currentUser?.name?.split(" ")[0]}! 👋
             </h1>
-            <p className="text-primary-100">
+            <p className="text-primary-100 whitespace-nowrap">
               {upcomingAppointments.length > 0
                 ? `You have ${upcomingAppointments.length} upcoming appointment${upcomingAppointments.length !== 1 ? "s" : ""}`
                 : "No upcoming appointments scheduled"

@@ -122,17 +122,17 @@ const ProfilePage = () => {
         <p className="text-gray-600 capitalize">{currentUser?.role}</p>
       </div>
 
-      {/* Stats Cards */}
+{/* Stats Cards */}
       {currentUser?.role === "patient" && (
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-3 gap-3">
           {profileStats.map((stat, index) => (
             <Card key={index} className="text-center">
-              <CardContent className="p-4">
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-2 ${stat.color}`}>
-                  <ApperIcon name={stat.icon} className="w-5 h-5" />
+              <CardContent className="p-3">
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center mx-auto mb-2 ${stat.color}`}>
+                  <ApperIcon name={stat.icon} className="w-4 h-4" />
                 </div>
-                <p className="text-lg font-bold text-gray-900">{stat.value}</p>
-                <p className="text-xs text-gray-600">{stat.label}</p>
+                <p className="text-base font-bold text-gray-900 mb-1">{stat.value}</p>
+                <p className="text-[10px] text-gray-600 leading-tight break-words px-1">{stat.label}</p>
               </CardContent>
             </Card>
           ))}

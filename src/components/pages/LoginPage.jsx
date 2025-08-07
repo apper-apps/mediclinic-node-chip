@@ -283,18 +283,7 @@ const fillDemoCredentials = (role) => {
                   {isLogin ? "Sign In" : "Create Account"}
                 </>
               )}
-            </Button>
-
-            <Button
-              type="button"
-              variant="outline"
-              size="lg"
-              onClick={handleGuestLogin}
-              className="w-full mt-4 border-primary-200 text-primary-600 hover:bg-primary-50"
-            >
-              <ApperIcon name="UserX" className="w-4 h-4 mr-2" />
-              Continue as Guest
-            </Button>
+</Button>
           </form>
         </div>
       </div>
